@@ -1,0 +1,12 @@
+
+Vagrant.configure("2") do |config|
+  config.vm.define "automation" do |automation|
+    automation.vm.box = "ubuntu/focal64"
+    automation.vm.hostname = "automation"
+    automation.vm.network "private_network", ip: "192.168.33.10"
+    automation.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+    end
+    automation.vm.provision "shell", path: "script.sh"
+  end
+end

@@ -8,3 +8,5 @@ env.bak/
 venv.bak/
 kc4-venv/
 .DS_Store
+.chile-venv/
+.chile-venv
